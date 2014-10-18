@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">EssayWheel</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="go_back">Go Back</string>
+
+    <string-array name="art_context">
+        <item>What other pieces did %s make during this time?</item>
+        <item>What style or school of art did %s subscribe to?</item>
+        <item>What other artists worked in the same style as %s?</item>
+    </string-array>
+    <string-array name="art_heuristic">
+        <item>What do you think of when you see the %s?</item>
+        <item>Do you like %s?</item>
+        <item>Is there any work from a differnet period that matches the same style as %s?</item>
+    </string-array>
+    <string-array name="art_structure">
+        <item>What material is %s made from?</item>
+        <item>What medium is %s made in?</item>
+        <item>How much space does %s take up?</item>
+    </string-array>
+    <string-array name="art_critics">
+        <item>How did the critics of the time respond to %s\'s work?</item>
+        <item>What is the modern opinion of %s? How has this opinion changed?</item>
+        <item>How did artists of competing styles respond to %s?</item>
+    </string-array>
+    <string-array name="art_creator">
+        <item>What other works did %s make?</item>
+        <item>Did %s have any relatives or good friends who worked in the same medium?</item>
+        <item>What circumstances in %s\'s life at the time influenced the piece of art?</item>
+    </string-array>
+
+    <string name="title_activity_question_display">QuestionDisplay</string>
+    <string name="title_activity_question_list">QuestionList</string>
+    <string name="title_activity_question">QuestionActivity</string>
+
+</resources>

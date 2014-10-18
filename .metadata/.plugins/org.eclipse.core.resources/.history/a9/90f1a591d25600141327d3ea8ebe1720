@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">EssayWheel</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="go_back">Go Back</string>
+    <string name="heuristic_text">Heuristic</string>
+    <string name="structure_text">Structure</string>
+    <string name="critics_text">Critics</string>
+    <string name="artifact_text">Artifact</string>
+    <string name="context_text">Context </string>
+    <string name="creator_text">Creator(s)</string>
+
+    <string name="artifact_name_text">Artifact Name:</string>
+    <string name="name_hint">Enter artifact name here</string>
+    <string name="artifact_type_text">Type of artifact:</string>
+    <string name="artifact_creator_text">Creator:</string>
+    <string name="creator_hint">Enter artifact creator here</string>
+    <string name="artifact_year_text">Year:</string>
+
+    <string name="save_button_text">Save Artifact</string>
+    
+    <string-array name="artifact_types">
+        <item>Art</item>
+        <item>Literature</item>
+    </string-array>
+    
+    <string-array name="art_context">
+        <item>What other pieces did %s make during this time?</item>
+        <item>What style or school of art did %s subscribe to?</item>
+        <item>What other artists worked in the same style as %s?</item>
+        <item>Are there any earlier works that %s is referencing here?</item>
+        <item>What other works is or was %s displayed with?</item>
+    </string-array>
+    <string-array name="art_heuristic">
+        <item>What do you think of when you see the %s?</item>
+        <item>Do you like %s?</item>
+        <item>Is there any work from a differnet period that matches the same style as %s?</item>
+        <item>Is there any relation between %s and scientific/historical concepts you learned?</item>
+        <item>What about %s draws you in?</item>
+    </string-array>
+    <string-array name="art_structure">
+        <item>What material is %s made from?</item>
+        <item>What medium is %s made in?</item>
+        <item>How much space does %s take up?</item>
+        <item>Is %s designed to interact with the environment in some way?</item>
+        <item>What design element does %s exhibit?</item>
+    </string-array>
+    <string-array name="art_critics">
+        <item>How did the critics of the time respond to %s\'s work?</item>
+        <item>What is the modern opinion of %s? How has this opinion changed?</item>
+        <item>How did artists of competing styles respond to %s?</item>
+        <item>Was %s designed to appeal to critics or intentionally offend them?</item>
+        <item>Are there any commmentaries about %s that are noteworthy in their own right?</item>
+    </string-array>
+    <string-array name="art_creator">
+        <item>What other works did %s make?</item>
+        <item>Did %s have any relatives or good friends who worked in the same medium?</item>
+        <item>What circumstances in %s\'s life at the time influenced the piece of art?</item>
+        <item>What environment did %s grow up in?</item>
+        <item>Was %s satisfied with their own work?</item>
+    </string-array>
+    
+    <string-array name="literature_context">
+        <item>Does %s\'s piece reference events of the time directly or indirectly?</item>
+        <item>Is %s\'s piece presented as fiction or non-fiction?</item>
+        <item>What genre does this work fit into? How old was the genre at the time?</item>
+        <item>Was %s responding to any of their writing contemporaries?</item>
+        <item>Does %s comment on any social or political issues?</item>
+    </string-array>
+    <string-array name="literature_heuristic">
+        <item>What other pieces of literature does %s remind you of?</item>
+        <item>Does %s remind you of any historical events?</item>
+        <item>Are there any modern literary pieces that follow a similar plot to %s?</item>
+        <item>Could you imagine the events of %s occuring in your own life?</item>
+        <item>Do any words or characters in %s strike you as unusual?</item>
+    </string-array>
+    <string-array name="literature_structure">
+        <item>How long is %s?</item>
+        <item>Does %s have a defined beginning, middle, and end?</item>
+        <item>How large is the cast of characters in %s?</item>
+        <item>Is %s more focused on details or more abstract?</item>
+        <item>How easily can a reader follow the flow of %s?</item>
+    </string-array>
+    <string-array name="literature_critics">
+        <item>How did critics respond to %s when it was first published?</item>
+        <item>How popular was %s to the general public?</item>
+        <item>Has critical opinion of %s changed over time?</item>
+        <item>Were critics of %s influenced by external social factors?</item>
+        <item>How did the government or key public figures respond to %s?</item>
+    </string-array>
+    <string-array name="literature_creator">
+        <item>What other works did %s make?</item>
+        <item>Did %s have any relatives or good friends who wrote in the same genre?</item>
+        <item>What circumstances in %s\'s life at the time influenced the piece?</item>
+        <item>What environment did %s grow up in?</item>
+        <item>Was %s satisfied with their own work?</item>
+    </string-array>
+    
+    <string-array name="science_heuristic">
+        <item>In what other circumstances have you seen the concepts in %s applied?</item>
+        <item>Can %s be used as a stepping stone for solving other problems?</item>
+        <item>Have you seen equations or processes of a similar form to %s elsewhere?</item>
+        <item>What unanswered questions does %s leave?</item>
+        <item>What advances are made possible by %s?</item>
+    </string-array>
+    <string-array name="science_context">
+        <item>What experiments led %s to this conclusion?</item>
+        <item>What prevented %s\'s contemporaries from forming the idea first?</item>
+        <item>What generated interest in the topic %s was studying?</item>
+        <item>What competing theories did %s\'s ideas challenge?</item>
+        <item>How far did %s\'s ideas diverge from the existing theory?</item>
+    </string-array>
+    <string-array name="science_structure">
+        <item>How is %s supported scientifically?</item>
+        <item>What do you need to know to apply the ideas of %s?</item>
+        <item>What experiments were conducted to confirm or deny %s?</item>
+        <item>What parts of the experiments around %s are potentially suspect?</item>
+        <item>How was the research on %s presented to the community?</item>
+    </string-array>
+    <string-array name="science_critics">
+        <item>Who most ardently opposed the idea that %s was correct? Why?</item>
+        <item>Has anyone found fault with the experiments used to prove %s?</item>
+        <item>Do people still consider %s a viable theory?</item>
+        <item>Are there any ethical objections to the research behind %s?</item>
+        <item>Are there some cases that %s can not explain?</item>
+    </string-array>
+    <string-array name="science_creator">
+        <item>What about this field of study interested %s?</item>
+        <item>How did %s convince themselves of their own theory?</item>
+        <item>Did %s focus on research or on evangelizing their ideas?</item>
+        <item>What sacrifices did %s have to make to pursue this research?</item>
+        <item>Who was %s competing with in this area of research?</item>
+    </string-array>
+    
+    <string-array name="history_heuristic">
+        <item>Do any other events in history follow a similar pattern to %s?</item>
+        <item>What problems in our society today are similar to %s?</item>
+        <item>Did %s lead to any scientific advances?</item>
+        <item>What literature has %s inspired?</item>
+        <item>What would you have thought of living in the middle of %s?</item>
+    </string-array>
+    <string-array name="history_context">
+        <item>How did regions not directly involved in %s influence the event?</item>
+        <item>What latent problems did %s bring to the surface?</item>
+        <item>What factors contributed to the start of %s?</item>
+        <item>How did %s influence the events to come?</item>
+        <item>What social environment characterized the time of %s?</item>
+    </string-array>
+    <string-array name="history_structure">
+        <item>What event set off %s?</item>
+        <item>What was the immediate response to %s?</item>
+        <item>At what point was it impossible for the parties involved in %s to avert the situation?</item>
+        <item>How long did %s last?</item>
+        <item>How was %s resolved?</item>
+    </string-array>
+    <string-array name="history_critics">
+        <item>What did people think of %s at the time?</item>
+        <item>What are the different schools of thought for analyzing %s?</item>
+        <item>How did the different perspectives on %s evolve over time?</item>
+        <item>Did the players involved in %s change their view on the situation over time?</item>
+        <item>Are there any ethical problems with the actions of the people involved in %s?</item>
+    </string-array>
+    <string-array name="history_creator">
+        <item>Who were the major players involved in %s?</item>
+        <item>What were the motivations of the people involved in %s?</item>
+        <item>Had there been any previous conflicts between the groups involved?</item>
+        <item>Could any one party be blamed for the events of %s?</item>
+        <item>Who writes about %s today?</item>
+    </string-array>
+
+    <string name="title_activity_question_display">QuestionDisplay</string>
+    <string name="title_activity_question_list">QuestionList</string>
+    <string name="title_activity_question">QuestionActivity</string>
+    <string name="title_activity_essay_question">EssayQuestionActivity</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_artifact_entry">ArtifactEntryActivity</string>
+
+</resources>

@@ -1,0 +1,49 @@
+package com.example.essaywheel;
+
+public class Artifact {
+	private String artifact_name;
+	private String artifact_creator;
+	private Category artifact_category;
+	private int artifact_year;
+	
+	public enum Category {
+		Art,
+		Literature
+	}
+	
+	public Artifact() {
+		
+	}
+	
+	public String getArtifactName() {
+		return artifact_name;
+	}
+	
+	public void setArtifactName(String name) {
+		artifact_name = name;
+	}
+	
+	public String getCreator() {
+		return artifact_creator;
+	}
+	
+	public void setCreatorName(String name) {
+		artifact_creator = name;
+	}
+	
+	public Category getCategory() {
+		return artifact_category;
+	}
+	
+	public void setCategory(Category category) {
+		artifact_category = category;
+	}
+	
+	public int getYear() {
+		return artifact_year;
+	}
+	
+	public void setYear(int year) {
+		artifact_year = year;
+	}
+}

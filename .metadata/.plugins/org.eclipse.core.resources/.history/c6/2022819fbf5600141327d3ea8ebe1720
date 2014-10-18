@@ -1,0 +1,98 @@
+package com.example.essaywheel;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import android.support.v7.app.ActionBarActivity;
+import android.os.Bundle;
+import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+public class EssayQuestionActivity extends ActionBarActivity {
+
+	Map<StringTuple, Integer> stringResources;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_essay_question);
+		
+		stringResources = new HashMap<StringTuple, Integer>();
+		stringResources.put(new StringTuple("art", "context"), R.array.art_context);
+		stringResources.put(new StringTuple("art", "heuristic"), R.array.art_heuristic);
+		stringResources.put(new StringTuple("art", "structure"), R.array.art_structure);
+		stringResources.put(new StringTuple("art", "critic"), R.array.art_critics);
+		stringResources.put(new StringTuple("art", "creator"), R.array.art_creator);
+		
+		Artifact artifact = getIntent().getParcelableExtra("artifact");
+		String buttonType = getIntent().getStringExtra("buttonClick");
+		
+		ListView questionList = (ListView)findViewById(R.id.question_list);
+		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+			android.R.layout.simple_list_item_1, getStringArray(artifact, buttonType));
+		
+		questionList.setAdapter(adapter);
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// Handle action bar item clicks here. The action bar will
+		// automatically handle clicks on the Home/Up button, so long
+		// as you specify a parent activity in AndroidManifest.xml.
+		int id = item.getItemId();
+		if (id == R.id.action_settings) {
+			return true;
+		}
+		return super.onOptionsItemSelected(item);
+	}
+	
+	private String[] getStringArray(Artifact artifact, String buttonName) {
+		int id = stringResources.get(new StringTuple(artifact.getCategory().name(), buttonName));
+		String[] result = getResources().getStringArray(id);
+		
+		for(int i = 0; i < result.length; i++) {
+			result[i] = String.format(result[i], artifact.getArtifactName());
+		}
+		
+		return result;
+	}
+	
+	private class StringTuple{
+		public String[] values;
+		
+		public StringTuple(String val1, String val2) {
+			values = new String[2];
+			values[0] = val1;
+			values[1] = val2;
+		}
+		
+		@Override
+		public int hashCode() {
+			return values[0].hashCode() * 17 + values[1].hashCode();
+		}
+		
+		@Override
+		public boolean equals(Object other) {
+			if (!(other instanceof StringTuple) ) {
+				return false;
+			}
+			
+			StringTuple otherTuple = (StringTuple)other;
+			
+			if (otherTuple.values[0] == null) {
+				if (this.values[0] != null) {
+					return false;
+				}
+			}
+			
+			if (otherTuple.values[1] == null) {
+				if (this.values[1] == null && 
+						(otherTuple.values[0] == null || otherTuple.values[0].equals(this.values[0])));
+			}
+			
+			return otherTuple.values[0].equals(this.values[0]) && 
+					otherTuple.values[1].equals(this.values[1]);
+		}
+	}
+}

@@ -1,0 +1,7 @@
+package com.example.essaywheel;
+
+import android.support.v4.app.Fragment;
+
+public class ArtifactFragment extends Fragment {
+
+}

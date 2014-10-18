@@ -1,0 +1,81 @@
+package com.example.essaywheel;
+
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.EditText;
+import android.widget.Spinner;
+
+public class ArtifactFragment extends Fragment {
+	private Artifact artifact;
+	private EditText artifact_name_entry;
+	private EditText artifact_creator_entry;
+	
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		artifact = new Artifact();
+	}
+	
+	@Override
+	public View onCreateView(LayoutInflater inflator, ViewGroup parent, Bundle savedInstanceState) {
+		View v = inflator.inflate(R.layout.fragment_artifact, parent, false);
+
+		artifact_name_entry = (EditText)v.findViewById(R.id.artifact_name_entry);
+		artifact_name_entry.addTextChangedListener(new TextWatcher() {
+			@Override
+			public void onTextChanged(CharSequence c, int start, int before, int count) {
+				artifact.setArtifactName(c.toString());
+			}
+
+			@Override
+			public void afterTextChanged(Editable s) {
+			}
+
+			@Override
+			public void beforeTextChanged(CharSequence s, int start, int count,
+					int after) {
+			}
+		});
+		
+		artifact_creator_entry = (EditText)v.findViewById(R.id.artifact_creator_entry);
+		artifact_creator_entry.addTextChangedListener(new TextWatcher() {
+			@Override
+			public void onTextChanged(CharSequence c, int start, int before, int count) {
+				artifact.setCreatorName(c.toString());
+			}
+
+			@Override
+			public void afterTextChanged(Editable s) {
+			}
+
+			@Override
+			public void beforeTextChanged(CharSequence s, int start, int count,
+					int after) {
+			}
+		});
+		
+		Spinner artifact_type_spinner = (Spinner)v.findViewById(R.id.artifact_type_entry);
+		ArrayAdapter<CharSequence> artifact_types = ArrayAdapter.createFromResource(this.getActivity().getApplicationContext(), R.array.artifact_types, android.R.layout.simple_dropdown_item_1line);
+		artifact_types.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		artifact_type_spinner.setAdapter(artifact_types);
+		
+		Spinner artifact_year_spinner = (Spinner)v.findViewById(R.id.artifact_year_entry);
+		Integer[] items = new Integer[5000];
+		
+		for (int i = 0; i < items.length; i++) {
+			items[i] = i - 2600;
+		}
+		
+		ArrayAdapter<Integer> year_adapter = new ArrayAdapter<Integer>(this.getActivity().getApplicationContext(), android.R.layout.simple_spinner_item, items);
+		artifact_year_spinner.setAdapter(year_adapter);
+		
+		return v;
+	}
+
+}
